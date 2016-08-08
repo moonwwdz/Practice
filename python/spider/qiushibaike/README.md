@@ -5,11 +5,9 @@
 
 主要的核心步骤有三点
 
-    - [x] 抓取网页内容
-
-    - [x] 正则匹配到数据
-
-    - [x] 完整的展示过程
+ - [x] 抓取网页内容
+ - [x] 正则匹配到数据
+ - [x] 完整的展示过程
 
 
 ## 核心正则
@@ -19,4 +17,14 @@ pattern = re.compile(<div class="author clearfix">.*?<h2>(.*?)</h2>.*?'+
         '<span class="stats-comments">.*?<i class="number">(.*?)</i>',re.S')
 ```
 虽然看着很长其实就是把整个数据的html表示了一次而已，当然后面深入学习正则后会简化这个
+
+## 使用方法
+```python
+python choushi.py
+```
+
+`回车`查看下一条
+
+`q`退出
+
     
