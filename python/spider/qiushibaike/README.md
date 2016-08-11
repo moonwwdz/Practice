@@ -4,9 +4,9 @@
 这是学习python后的第一个爬虫，参考[崔庆才](http://weibo.com/cuiqingcai/profile?s=6cm7D0)的[静觅](http://cuiqingcai.com/)上的[Python爬虫实战一之爬取糗事百科段子](http://cuiqingcai.com/990.html)的教程一点点来实现的。
 
 主要的核心步骤有三点
-1. [x] 抓取网页内容
-2. [x] 正则匹配到数据
-3. [] 完整的展示过程
+    - [x] 抓取网页内容
+    - [x] 正则匹配到数据
+    - [] 完整的展示过程
 
 
 ## 核心正则
