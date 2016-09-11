@@ -37,7 +37,7 @@ class CSBK:
         items = []
         content = self.getPageConent(page_num)
         if content:
-            pattern = re.compile('<div class="author clearfix">.*?<h2>(.*?)</h2>.*?<div class="content">(.*?)</div>.*?<span class="stats-vote"><i class="number">(.*?)</i>.*?<span class="stats-comments">.*?<i class="number">(.*?)</i>',re.S)
+            pattern = re.compile('<div class="author clearfix">.*?<h2>(.*?)</h2>.*?<div class="content">.*?<span>(.*?)</span>.*?</div>.*?<span class="stats-vote"><i class="number">(.*?)</i>.*?<span class="stats-comments">.*?<i class="number">(.*?)</i>',re.S)
             m = re.findall(pattern,content)
             if m:
                 replace_pattern = re.compile(r'<br>')
