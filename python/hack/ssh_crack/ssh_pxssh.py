@@ -24,7 +24,6 @@ def command(s,c):
 
 
 if __name__ == '__main__':
-    s = connectSSH('23.110.64.84','root','wangy@3483','22')
-    #s = connectSSH('192.168.212.131','root','123456','14987')
+    s = connectSSH('192.168.212.131','root','123456','14987')
     command(s,'cat /etc/passwd | grep root')
 
