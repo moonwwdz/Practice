@@ -11,6 +11,8 @@
 
 //仿自：http://www.jianshu.com/u/c887880e8f06
 
+var $ = $ || window.$;
+var url = "";
 // 在侧边栏中添加目录项
 function appendMenuItem(tagName,id,content){
     console.log(tagName+" "+tagName.substring(1));
@@ -18,10 +20,7 @@ function appendMenuItem(tagName,id,content){
     $('#menu_nav_ol').append('<li class="' + id +'" style="padding-left: '+ paddingLeft +'px;"><b>' + content + '</b></li>');
 }
 
-(function() {
-    'use strict';
-
-    var $ = $ || window.$;
+function render(){
     let titles = $("#readme article").find('h1,h2,h3,h4,h5,h6');
     if(titles.length >0){
         console.log(titles);
@@ -43,5 +42,18 @@ function appendMenuItem(tagName,id,content){
             let targetId = $(this).attr('class');
             $("#"+targetId)[0].scrollIntoView(true);
         });
+        url = location.href;
     }
+}
+
+
+(function() {
+    'use strict';   
+    render();
+    setInterval(function(){
+        console.log(url,location.href);
+        if( url != location.href){
+            render()
+        }
+    },5000)
 })();
