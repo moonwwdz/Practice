@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set timeout 60
+spawn git push origin master
+expect "Username for*"
+send "moonwwdz\n"
+
+expect "Password for*"
+send "159753@wy\n"
+
+interact
+
+
