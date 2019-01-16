@@ -100,10 +100,11 @@ public class Main {
             mdFile.createNewFile();
             BufferedWriter mdWrite = new BufferedWriter(new FileWriter(mdFile));
             mapClips.forEach((name,values)->{
+                List<ClippingCont> exceptCommit = values.stream().filter(v -> v.getType().equals(2)).collect(Collectors.toList());;
                 try {
                     mdWrite.write("## " + markdownStr(name));
-                    for (Integer i = 0; i < values.size(); i++) {
-                        ClippingCont temp = values.get(i);
+                    for (Integer i = 0; i < exceptCommit.size(); i++) {
+                        ClippingCont temp = exceptCommit.get(i);
                         if (i.equals(0)) {
                             mdWrite.write(markdownStr("*" + temp.getAuthor() + "*"));
                         }
