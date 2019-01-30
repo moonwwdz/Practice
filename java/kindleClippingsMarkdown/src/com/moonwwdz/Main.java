@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Main {
 
-    public static String filePath = "H:\\clippings.txt";
+    public static String filePath = "My Clippings.txt";
 
     public static void main(String[] args) {
         ClippingCont clippingCont = new ClippingCont();
@@ -100,7 +100,7 @@ public class Main {
             mdFile.createNewFile();
             BufferedWriter mdWrite = new BufferedWriter(new FileWriter(mdFile));
             mapClips.forEach((name,values)->{
-                List<ClippingCont> exceptCommit = values.stream().filter(v -> v.getType().equals(2)).collect(Collectors.toList());;
+                List<ClippingCont> exceptCommit = values.stream().filter(v -> v.getType().equals(2)).collect(Collectors.toList());
                 try {
                     mdWrite.write("## " + markdownStr(name));
                     for (Integer i = 0; i < exceptCommit.size(); i++) {
